@@ -8,35 +8,32 @@ protocol Coordinator {
     func reset()
 }
 
-// First Tab Coordinator
 class FirstTabCoordinator: ObservableObject, Coordinator {
     @Published var path = NavigationPath()
     @Published var presentedDestination: Destination?
-    
+
     enum Destination: Hashable, Identifiable {
         case push(DetailType)
         case present(ModalType)
 
         enum DetailType: Hashable {
-            case detail
-            case bookMark
+            case detail(String)
+            case favourite
         }
 
         enum ModalType: Hashable {
-            case modalDetail
+            case modelSheet1
+            case modelSheet2
         }
 
-        // Identifiable conformance
         var id: String {
             switch self {
-            case .push(let detailType):
-                return "push-\(detailType)"
-            case .present(let modalType):
-                return "present-\(modalType)"
+            case .push(let detailType): return "push-\(detailType)"
+            case .present(let modalType): return "present-\(modalType)"
             }
         }
     }
-    
+
     func navigate(to destination: Destination) {
         switch destination {
         case .push(let detailType):
@@ -45,15 +42,13 @@ class FirstTabCoordinator: ObservableObject, Coordinator {
             presentedDestination = .present(modalType)
         }
     }
-    
+
     func reset() {
-        path.removeLast()
+        if !path.isEmpty {
+            path.removeLast()
+        }
     }
-
 }
-
-
-
 
 
 
@@ -72,6 +67,7 @@ class SecondTabCoordinator: ObservableObject, Coordinator {
         path.removeLast()
     }
 }
+
 
 class ThirdTabCoordinator: ObservableObject, Coordinator {
     @Published var path = NavigationPath()

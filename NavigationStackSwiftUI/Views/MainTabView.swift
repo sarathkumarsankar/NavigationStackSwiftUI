@@ -10,23 +10,25 @@ struct MainTabView: View {
         TabView {
             NavigationStack(path: $firstTabCoordinator.path) {
                 FirstTabView()
+                    .navigationDestination(for: FirstTabCoordinator.Destination.DetailType.self) { detailType in
+                        switch detailType {
+                        case .detail(let data):
+                            DetailView(data: data)
+                        case .favourite:
+                            Text("Favourite view")
+                        }
+                    }
                     .sheet(item: $firstTabCoordinator.presentedDestination) { destination in
                         switch destination {
                         case .present(let modalType):
                             switch modalType {
-                            case .modalDetail:
-                                Text("Modal Detail for Conversation")
+                            case .modelSheet1:
+                                Text("ModelSheet1")
+                            case .modelSheet2:
+                                Text("ModelSheet2")
                             }
                         default:
                             EmptyView()
-                        }
-                    }
-                    .navigationDestination(for: FirstTabCoordinator.Destination.DetailType.self) { detailType in
-                        switch detailType {
-                        case .detail:
-                            Text("Home Details View")
-                        case .bookMark:
-                            Text("Book mark View")
                         }
                     }
                    
@@ -36,19 +38,19 @@ struct MainTabView: View {
                 Label("Conversation", systemImage: "message")
             }
             
-            NavigationStack(path: $secondTabCoordinator.path) {
-                SecondTabView(coordinator: secondTabCoordinator)
-            }
-            .tabItem {
-                Label("PhoneBook", systemImage: "phone")
-            }
-            
-            NavigationStack(path: $thirdTabCoordinator.path) {
-                ThirdTabView(coordinator: thirdTabCoordinator)
-            }
-            .tabItem {
-                Label("TAC Webview", systemImage: "star")
-            }
+//            NavigationStack(path: $secondTabCoordinator.path) {
+//                SecondTabView(coordinator: secondTabCoordinator)
+//            }
+//            .tabItem {
+//                Label("PhoneBook", systemImage: "phone")
+//            }
+//            
+//            NavigationStack(path: $thirdTabCoordinator.path) {
+//                ThirdTabView(coordinator: thirdTabCoordinator)
+//            }
+//            .tabItem {
+//                Label("TAC Webview", systemImage: "star")
+//            }
         }
     }
 }
