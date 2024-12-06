@@ -16,7 +16,7 @@ struct FirstTabView: View {
                     coordinator.navigate(to: .push(.detail("Sarath")))
                 }
                 Button("Go to Favourites") {
-                    coordinator.navigate(to: .push(.favourite))
+                    coordinator.navigate(to: .push(.favourite2))
                 }
                 Button("Present Modal 1") {
                     coordinator.navigate(to: .present(.modelSheet1))

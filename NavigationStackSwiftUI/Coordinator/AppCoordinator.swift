@@ -1,31 +1,37 @@
 
 import SwiftUI
 
-protocol Coordinator {
-    associatedtype Destination: Hashable
-    var path: NavigationPath { get set }
+protocol Coordinator: ObservableObject {
+    associatedtype Destination: Hashable & Identifiable
+    var navigationPath: NavigationPath { get set }
+    var activeSheet: Destination? { get set }
     func navigate(to destination: Destination)
     func reset()
 }
 
+protocol DestinationProtocol: Hashable, Identifiable {
+    associatedtype DetailType: Hashable
+}
+
 class FirstTabCoordinator: ObservableObject, Coordinator {
-    @Published var path = NavigationPath()
-    @Published var presentedDestination: Destination?
-
+    @Published var navigationPath = NavigationPath()
+    @Published var activeSheet: Destination?
+    
     enum Destination: Hashable, Identifiable {
-        case push(DetailType)
-        case present(ModalType)
-
-        enum DetailType: Hashable {
+        case push(Route)
+        case present(Sheet)
+        
+        enum Route: Hashable {
             case detail(String)
             case favourite
+            case favourite2
         }
-
-        enum ModalType: Hashable {
+        
+        enum Sheet: Hashable {
             case modelSheet1
             case modelSheet2
         }
-
+        
         var id: String {
             switch self {
             case .push(let detailType): return "push-\(detailType)"
@@ -33,19 +39,20 @@ class FirstTabCoordinator: ObservableObject, Coordinator {
             }
         }
     }
-
+    
     func navigate(to destination: Destination) {
         switch destination {
-        case .push(let detailType):
-            path.append(detailType)
-        case .present(let modalType):
-            presentedDestination = .present(modalType)
+        case .push(let route):
+            navigationPath.append(route)
+        case .present(let sheetRoute):
+            activeSheet = .present(sheetRoute)
         }
     }
-
+    
+    
     func reset() {
-        if !path.isEmpty {
-            path.removeLast()
+        if !navigationPath.isEmpty {
+            navigationPath.removeLast()
         }
     }
 }
@@ -53,34 +60,91 @@ class FirstTabCoordinator: ObservableObject, Coordinator {
 
 
 class SecondTabCoordinator: ObservableObject, Coordinator {
-    @Published var path = NavigationPath()
+    @Published var navigationPath = NavigationPath()
+    @Published var activeSheet: Destination?
     
-    enum Destination: Hashable {
-        case searchDetail
+    enum Destination: Hashable, Identifiable {
+        case push(Route)
+        case present(Sheet)
+        
+        enum Route: Hashable {
+            case detail(String)
+            case favourite
+            case favourite2
+        }
+        
+        enum Sheet: Hashable {
+            case modelSheet1
+            case modelSheet2
+        }
+        
+        var id: String {
+            switch self {
+            case .push(let detailType): return "push-\(detailType)"
+            case .present(let modalType): return "present-\(modalType)"
+            }
+        }
     }
     
     func navigate(to destination: Destination) {
-        path.append(destination)
+        switch destination {
+        case .push(let route):
+            navigationPath.append(route)
+        case .present(let sheetRoute):
+            activeSheet = .present(sheetRoute)
+        }
     }
     
+    
     func reset() {
-        path.removeLast()
+        if !navigationPath.isEmpty {
+            navigationPath.removeLast()
+        }
     }
 }
 
 
 class ThirdTabCoordinator: ObservableObject, Coordinator {
-    @Published var path = NavigationPath()
     
-    enum Destination: Hashable {
-        case favoriteDetail
+    @Published var navigationPath = NavigationPath()
+    @Published var activeSheet: Destination?
+    
+    enum Destination: Hashable, Identifiable {
+        case push(Route)
+        case present(Sheet)
+        
+        enum Route: Hashable {
+            case detail(String)
+            case favourite
+            case favourite2
+        }
+        
+        enum Sheet: Hashable {
+            case modelSheet1
+            case modelSheet2
+        }
+        
+        var id: String {
+            switch self {
+            case .push(let detailType): return "push-\(detailType)"
+            case .present(let modalType): return "present-\(modalType)"
+            }
+        }
     }
     
     func navigate(to destination: Destination) {
-        path.append(destination)
+        switch destination {
+        case .push(let route):
+            navigationPath.append(route)
+        case .present(let sheetRoute):
+            activeSheet = .present(sheetRoute)
+        }
     }
     
+    
     func reset() {
-        path.removeLast()
+        if !navigationPath.isEmpty {
+            navigationPath.removeLast()
+        }
     }
 }
