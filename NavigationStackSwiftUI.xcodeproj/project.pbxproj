@@ -7,28 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		698DE0132D0491090041F2BD /* BackUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698DE0122D0491090041F2BD /* BackUpView.swift */; };
 		69EF01B72CFF2B4900235013 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01AA2CFF2B4900235013 /* AppCoordinator.swift */; };
 		69EF01B82CFF2B4900235013 /* FirstTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01AE2CFF2B4900235013 /* FirstTabView.swift */; };
-		69EF01B92CFF2B4900235013 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01AF2CFF2B4900235013 /* MainTabView.swift */; };
+		69EF01B92CFF2B4900235013 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01AF2CFF2B4900235013 /* MainView.swift */; };
 		69EF01BA2CFF2B4900235013 /* SecondTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01B02CFF2B4900235013 /* SecondTabView.swift */; };
 		69EF01BB2CFF2B4900235013 /* ThirdTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01B12CFF2B4900235013 /* ThirdTabView.swift */; };
-		69EF01BC2CFF2B4900235013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01B42CFF2B4900235013 /* ContentView.swift */; };
 		69EF01BD2CFF2B4900235013 /* NavigationStackSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01B52CFF2B4900235013 /* NavigationStackSwiftUIApp.swift */; };
 		69EF01BE2CFF2B4900235013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EF01AC2CFF2B4900235013 /* Preview Assets.xcassets */; };
 		69EF01BF2CFF2B4900235013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EF01B32CFF2B4900235013 /* Assets.xcassets */; };
+		69F649292D059510008C5326 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F649282D059510008C5326 /* BaseCoordinator.swift */; };
+		69F6492B2D059588008C5326 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6492A2D059588008C5326 /* CustomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		698DE0122D0491090041F2BD /* BackUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpView.swift; sourceTree = "<group>"; };
 		69EF018D2CFF2AE800235013 /* NavigationStackSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EF01AA2CFF2B4900235013 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		69EF01AC2CFF2B4900235013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		69EF01AE2CFF2B4900235013 /* FirstTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabView.swift; sourceTree = "<group>"; };
-		69EF01AF2CFF2B4900235013 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		69EF01AF2CFF2B4900235013 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		69EF01B02CFF2B4900235013 /* SecondTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabView.swift; sourceTree = "<group>"; };
 		69EF01B12CFF2B4900235013 /* ThirdTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTabView.swift; sourceTree = "<group>"; };
 		69EF01B32CFF2B4900235013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69EF01B42CFF2B4900235013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		69EF01B52CFF2B4900235013 /* NavigationStackSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackSwiftUIApp.swift; sourceTree = "<group>"; };
+		69F649282D059510008C5326 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		69F6492A2D059588008C5326 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				69EF01AA2CFF2B4900235013 /* AppCoordinator.swift */,
+				69F649282D059510008C5326 /* BaseCoordinator.swift */,
+				69F6492A2D059588008C5326 /* CustomTabView.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -74,15 +80,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		69EF01B22CFF2B4900235013 /* Views */ = {
+		69EF01B22CFF2B4900235013 /* ExampleUsage */ = {
 			isa = PBXGroup;
 			children = (
-				69EF01AF2CFF2B4900235013 /* MainTabView.swift */,
+				69EF01AF2CFF2B4900235013 /* MainView.swift */,
 				69EF01AE2CFF2B4900235013 /* FirstTabView.swift */,
 				69EF01B02CFF2B4900235013 /* SecondTabView.swift */,
 				69EF01B12CFF2B4900235013 /* ThirdTabView.swift */,
 			);
-			path = Views;
+			path = ExampleUsage;
 			sourceTree = "<group>";
 		};
 		69EF01B62CFF2B4900235013 /* NavigationStackSwiftUI */ = {
@@ -90,10 +96,10 @@
 			children = (
 				69EF01AB2CFF2B4900235013 /* Coordinator */,
 				69EF01AD2CFF2B4900235013 /* Preview Content */,
-				69EF01B22CFF2B4900235013 /* Views */,
+				69EF01B22CFF2B4900235013 /* ExampleUsage */,
 				69EF01B32CFF2B4900235013 /* Assets.xcassets */,
-				69EF01B42CFF2B4900235013 /* ContentView.swift */,
 				69EF01B52CFF2B4900235013 /* NavigationStackSwiftUIApp.swift */,
+				698DE0122D0491090041F2BD /* BackUpView.swift */,
 			);
 			path = NavigationStackSwiftUI;
 			sourceTree = "<group>";
@@ -172,11 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				69EF01B72CFF2B4900235013 /* AppCoordinator.swift in Sources */,
+				69F649292D059510008C5326 /* BaseCoordinator.swift in Sources */,
 				69EF01B82CFF2B4900235013 /* FirstTabView.swift in Sources */,
-				69EF01B92CFF2B4900235013 /* MainTabView.swift in Sources */,
+				69EF01B92CFF2B4900235013 /* MainView.swift in Sources */,
 				69EF01BA2CFF2B4900235013 /* SecondTabView.swift in Sources */,
+				698DE0132D0491090041F2BD /* BackUpView.swift in Sources */,
 				69EF01BB2CFF2B4900235013 /* ThirdTabView.swift in Sources */,
-				69EF01BC2CFF2B4900235013 /* ContentView.swift in Sources */,
+				69F6492B2D059588008C5326 /* CustomTabView.swift in Sources */,
 				69EF01BD2CFF2B4900235013 /* NavigationStackSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

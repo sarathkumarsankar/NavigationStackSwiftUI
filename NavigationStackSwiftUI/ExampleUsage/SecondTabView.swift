@@ -9,11 +9,10 @@ import SwiftUI
 struct SecondTabView: View {
     var body: some View {
         VStack {
-            Text("Search Screen")
+            Text("Second TabView")
             Button("Go to Search Details") {
-//                $coordinator.navigate(to: .searchDetail)
             }
         }
-        .navigationTitle("Search")
+        .navigationTitle("Second Tab")
     }
 }
