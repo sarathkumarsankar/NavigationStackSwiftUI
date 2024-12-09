@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		698DE0132D0491090041F2BD /* BackUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698DE0122D0491090041F2BD /* BackUpView.swift */; };
-		69EF01B72CFF2B4900235013 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01AA2CFF2B4900235013 /* AppCoordinator.swift */; };
 		69EF01B82CFF2B4900235013 /* FirstTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01AE2CFF2B4900235013 /* FirstTabView.swift */; };
 		69EF01B92CFF2B4900235013 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01AF2CFF2B4900235013 /* MainView.swift */; };
 		69EF01BA2CFF2B4900235013 /* SecondTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF01B02CFF2B4900235013 /* SecondTabView.swift */; };
@@ -18,12 +17,15 @@
 		69EF01BF2CFF2B4900235013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EF01B32CFF2B4900235013 /* Assets.xcassets */; };
 		69F649292D059510008C5326 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F649282D059510008C5326 /* BaseCoordinator.swift */; };
 		69F6492B2D059588008C5326 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6492A2D059588008C5326 /* CustomTabView.swift */; };
+		69F6492F2D05B5F8008C5326 /* FirstTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6492E2D05B5F6008C5326 /* FirstTabCoordinator.swift */; };
+		69F649312D05B62C008C5326 /* SecondTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F649302D05B62C008C5326 /* SecondTabCoordinator.swift */; };
+		69F649332D05B640008C5326 /* ThirdTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F649322D05B640008C5326 /* ThirdTabCoordinator.swift */; };
+		69F649352D05BD10008C5326 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F649342D05BD10008C5326 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		698DE0122D0491090041F2BD /* BackUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackUpView.swift; sourceTree = "<group>"; };
 		69EF018D2CFF2AE800235013 /* NavigationStackSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		69EF01AA2CFF2B4900235013 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		69EF01AC2CFF2B4900235013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		69EF01AE2CFF2B4900235013 /* FirstTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabView.swift; sourceTree = "<group>"; };
 		69EF01AF2CFF2B4900235013 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -33,6 +35,10 @@
 		69EF01B52CFF2B4900235013 /* NavigationStackSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackSwiftUIApp.swift; sourceTree = "<group>"; };
 		69F649282D059510008C5326 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		69F6492A2D059588008C5326 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		69F6492E2D05B5F6008C5326 /* FirstTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabCoordinator.swift; sourceTree = "<group>"; };
+		69F649302D05B62C008C5326 /* SecondTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabCoordinator.swift; sourceTree = "<group>"; };
+		69F649322D05B640008C5326 /* ThirdTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTabCoordinator.swift; sourceTree = "<group>"; };
+		69F649342D05BD10008C5326 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,7 @@
 		69EF01AB2CFF2B4900235013 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				69EF01AA2CFF2B4900235013 /* AppCoordinator.swift */,
+				69F649342D05BD10008C5326 /* Coordinator.swift */,
 				69F649282D059510008C5326 /* BaseCoordinator.swift */,
 				69F6492A2D059588008C5326 /* CustomTabView.swift */,
 			);
@@ -84,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				69EF01AF2CFF2B4900235013 /* MainView.swift */,
+				69F6492E2D05B5F6008C5326 /* FirstTabCoordinator.swift */,
+				69F649302D05B62C008C5326 /* SecondTabCoordinator.swift */,
+				69F649322D05B640008C5326 /* ThirdTabCoordinator.swift */,
 				69EF01AE2CFF2B4900235013 /* FirstTabView.swift */,
 				69EF01B02CFF2B4900235013 /* SecondTabView.swift */,
 				69EF01B12CFF2B4900235013 /* ThirdTabView.swift */,
@@ -177,13 +186,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69EF01B72CFF2B4900235013 /* AppCoordinator.swift in Sources */,
 				69F649292D059510008C5326 /* BaseCoordinator.swift in Sources */,
+				69F649332D05B640008C5326 /* ThirdTabCoordinator.swift in Sources */,
 				69EF01B82CFF2B4900235013 /* FirstTabView.swift in Sources */,
+				69F6492F2D05B5F8008C5326 /* FirstTabCoordinator.swift in Sources */,
 				69EF01B92CFF2B4900235013 /* MainView.swift in Sources */,
 				69EF01BA2CFF2B4900235013 /* SecondTabView.swift in Sources */,
 				698DE0132D0491090041F2BD /* BackUpView.swift in Sources */,
+				69F649312D05B62C008C5326 /* SecondTabCoordinator.swift in Sources */,
 				69EF01BB2CFF2B4900235013 /* ThirdTabView.swift in Sources */,
+				69F649352D05BD10008C5326 /* Coordinator.swift in Sources */,
 				69F6492B2D059588008C5326 /* CustomTabView.swift in Sources */,
 				69EF01BD2CFF2B4900235013 /* NavigationStackSwiftUIApp.swift in Sources */,
 			);
